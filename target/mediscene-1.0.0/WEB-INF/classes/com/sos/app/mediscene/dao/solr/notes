@@ -1,0 +1,38 @@
+http://quizlet.com/47571/flashcards
+http://www2.jetblue.com/pickmeup/RUMZLW/Madhab/Ray
+
+//casa
+https://github.com/spring-projects/spring-data-cassandra
+
+//cql
+http://www.datastax.com/wp-content/uploads/2013/03/cql_3_ref_card.pdf
+
+//solr
+https://github.com/spring-projects/spring-data-solr
+http://www.javacodegeeks.com/2013/05/spring-data-solr-tutorial-crud-almost.html
+http://lucene.apache.org/solr/3_6_2/doc-files/tutorial.html
+http://docs.spring.io/spring-data/data-solr/docs/current/reference/htmlsingle/#solr.mapping.mappingSolr
+http://wiki.apache.org/solr/SchemaXml#The_Unique_Key_Field
+https://cwiki.apache.org/confluence/display/solr/Putting+the+Pieces+Together
+
+//bulk load
+http://www.andornot.com/blog/post/Sample-Solr-DataImportHandler-for-XML-Files.aspx
+http://wiki.apache.org/solr/DataImportHandler
+http://wiki.apache.org/solr/DataImportHandler#FieldReaderDataSource
+https://wiki.apache.org/solr/SolrPerformanceFactors
+http://lucene.apache.org/solr/4_1_0/solr-solrj/index.html?org/apache/solr/client/solrj/impl/ConcurrentUpdateSolrServer.html
+
+//auto-complete
+http://www.andornot.com/blog/post/Advanced-autocomplete-with-Solr-Ngrams-and-Twitters-typeaheadjs.aspx
+
+//browse
+http://localhost:8983/solr/collection1/browse?&q=id:Acamprosate_Calcium&mlt=true
+
+//solr-delete
+curl http://localhost:8983/solr/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8'  
+curl http://localhost:8983/solr/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'
+Another strategy would be to add two bookmarks in your browser:
+
+http://localhost:8983/solr/update?stream.body=<delete><query>*:*</query></delete>
+http://localhost:8983/solr/update?stream.body=<commit/>
+And use those as you're developing to clear out the index as necessary.

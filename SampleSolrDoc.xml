@@ -1,0 +1,21 @@
+<add>
+	<doc boost="1.0">
+		<field name="name">4 Aminobenzoic Acid</field>
+		<field name="generic_name">Generic Name : Para-Aminobenzoic Acid (PABA)			</field>
+		<field name="indication">Chemical sunscreens are used as adjuncts in vitiligo
+			therapy, drug induced phototoxicity and to facilitate tanning while
+			preventing sunburn. There is some evidence that they can prevent skin
+			cancer and premature ageing of skin.</field>
+		<field name="contra_indication"></field>
+		<field name="caution"></field>
+		<field name="side_effect"></field>
+		<field name="find_brand_by_samepid">find_brand_by_samepid.php?similarpid=1739,1893,2343
+		</field>
+		<field name="show_generics_with_samepid">show_generics_with_samepid.php?similarpid=1739,1893,2343
+		</field>
+		<field name="id">4_Aminobenzoic_Acid</field>
+	</doc>
+</add>
+
+
+

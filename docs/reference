@@ -1,0 +1,14 @@
+sh bin/shutdown.sh
+rm -rf logs/catalina.out
+rm -rf logs/localhost*
+rm -rf temp/safeToDelete.tmp
+rm -rf work/Catalina/localhost/mediscene/
+rm -rf webapps/mediscene.war
+rm -rf webapps/mediscene
+cp -f /Users/kaniska_mac/Documents/code/MediScene/target/mediscene.war webapps/
+
+sh bin/startup.sh
+
+Medi@Guide1
+
+

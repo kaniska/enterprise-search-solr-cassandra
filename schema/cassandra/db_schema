@@ -1,0 +1,82 @@
+-- Cassandra
+
+CREATE KEYSPACE MediScene
+  WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+CREATE TABLE MediScene.Drugs (
+id uuid,
+name text,
+batch_id text,
+mfc_year timestamp,
+type text,
+disease_class text,
+medicine_class text,
+generics_list set<text>,
+approx_retail_price text,
+currency_type text,
+composition text,
+solution text,
+regulatory_agency text,
+mfc_name text,
+pill_pictures set<text>,
+monitoring_params set<text>,
+unit_price text,
+package_per_unit text,
+PRIMARY KEY (id, name, mfc_name)
+);
+
+// Lookup Drugs for a given Generic
+CREATE TABLE MediScene.Generics_Drugs (
+generic_id int,
+generic_name text,
+related_drugs_list list<text>
+);
+
+// Lookup Generics
+CREATE TABLE MediScene.Related_Generics (
+generic_id int,
+generic_name text,
+generic_list_by_common_disease list<text>,
+generic_list_by_common_symptom list<text>,
+generic_list_by_common_side_effect list<text>,
+generic_list_by_common_combination list<text>
+);
+
+// Lookup Related Drugs for given Drug Id
+CREATE TABLE MediScene.Related_Drugs (
+drug_id int,
+drug_name text,
+drugs_list_by_common_generics list<text>
+drugs_list_by_common_disease list<text>
+);
+CREATE TABLE MediScene.Generics (
+  id uuid,
+  name text,
+  batch_id text,
+  generic_category text,
+  show_generics_with_samepid text,
+  description text,
+  symptoms set<text>,
+  metabolism text,
+  special_precautions set<text>,
+  caution set<text>,
+  indication set<text>,
+  contra_indication set<text>,
+  adverse_drug_reactions set<text>,
+  side_effect set<text>,
+ find_brand_by_samepid text,
+  PRIMARY KEY (id, name)
+);
+CREATE TABLE MediScene.Manufacture (
+id int PRIMARY KEY,
+name text,
+drugs list<int>
+);
+
+CREATE TABLE MediScene.Store (
+id int PRIMARY KEY,
+store_name text,
+store_address text,
+store_phone text,
+drugs_category list<text>,
+drugs list<text>
+);

@@ -1,0 +1,17 @@
+
+
+ https://lucene.apache.org/solr/4_9_0/tutorial.html      - Solr tutorial
+ 
+ http://wiki.apache.org/solr/SchemaXml    - Schema xml help
+ 
+ --Command to start Solar in my local mac
+ 
+ /Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/bin/java -jar start.jar 
+ 
+ 
+ http://www.typo3-media.com/blog/solr-search-request-handlers.html
+ 
+ http://sujitpal.blogspot.in/2011/02/solr-custom-search-requesthandler.html
+
+
+java -jar webharvest_all_2.jar config=medguideindia_copy.xml workdir=/tmp loglevel=error

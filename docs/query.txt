@@ -1,0 +1,157 @@
+
+http://localhost:8983/solr/collection1/select?q=*:*&group=true&group.field=indication
+
+http://localhost:8983/solr/collection1/select?q=priority:2
+
+http://localhost:8983/solr/collection1/select?q=subject:Vacancies
+
+title:foo OR (title:foo AND title:bar)^2.0 OR title:"foo bar"^10
+
+(*:* -title:foo)^2.0
+
+>>>
+
+http://localhost:8983/solr/collection1/select?q=name:*&defType=edismax&qf=indication^0.5+side_effect^20&
+bq=side_effect:*cancer*^25.0
+
+http://localhost:8983/solr/collection1/select?q=name:*&defType=edismax&bq=indication:*skin*cancer^25.0
+
+>> http://localhost:8983/solr/collection1/select?q=indication:*skin*
+http://localhost:8983/solr/collection1/select?q=indication:*skin*&defType=edismax&bq=indication:*Herpes*^0.5
+
+
+http://localhost:8983/solr/collection1/select?q=name:Ab*
+
+http://localhost:8983/solr/collection1/select?q=side_effect:*dizziness*&fl=name,side_effect
+
+sorted and pagination :
+http://localhost:8983/solr/collection1/select?q=*&fl=name&sort=id%20asc&start=0&rows=5
+
+http://localhost:8983/solr/collection1/select?q=contra_indication:*pregnancy*%20AND%20side_effect:*pregnancy*&fl=name,indication,contra_indication,side_effect
+
+http://localhost:8983/solr/collection1/select?q=indication:*cancer*%20OR%20contra_indication:*cancer*%20OR%20side_effect:*cancer*&fl=name,indication,contra_indication,side_effect
+
+http://localhost:8983/solr/collection1/select?q=indication:*cancer*%20OR%20contra_indication:*cancer*%20OR%20
+side_effect:*cancer*&fl=name,indication,contra_indication,side_effect&defType=edismax&qf=indication^20+side_effect^5&
+bq=(side_effect:*skin*cancer*^5.0%20AND%20indication:*skin*cancer*^25.0)
+ 
+
+http://localhost:8983/solr/collection1/select?q=indication:*cancer*%20OR%20contra_indication:*cancer*%20OR%20
+side_effect:*cancer*&fl=name,indication,contra_indication,side_effect&defType=edismax&
+bq=(indication:*skin*cancer^25.0)
+
+
+(a)
+Rank by boosting
+http://localhost:8983/solr/collection1/select?q=indication:*.*&fl=name,indication,contra_indication,side_effect&
+defType=edismax&qf=indication^5
+&bq=(indication:*pancreas*)^25.0
+
+>> http://localhost:8983/solr/collection1/select?q=indication:*skin*
+http://localhost:8983/solr/collection1/select?q=indication:*skin*&defType=edismax&bq=indication:*Herpes*^0.5
+
+////
+The ranking terms will only change the sorting order, not the number of documents found by a query. All documents containing a ranking term will be sorted before all documents without it.
+
+if you want all documents with HDTV to sort before all documents without it, use a very high boost:
+widescreen AND HDTV^100
+
+
+(b) Rank using Term Proximity concept - how close certain terms are inside a document
+//// Use the concept of - http://wiki.apache.org/solr/SolrRelevancyCookbook#Ranking_Terms
+Term Proximity
+
+
+
+It may be desirable to boost the score of documents with query terms that appear closer together. This is not done by default in Lucene, but there are Lucene Span queries that do this. Unfortunately, these queries are relatively new and don't have any support in the query parser (only a Java API currently exists).
+
+One way to get term proximity effects with the current query parser is to use a phrase query with a very large slop. 
+Phrase queries with slop will score higher when the terms are closer together.
+
+without term proximity
+term proximity using phrase queries
+foo AND bar
+"foo bar"~1000000
+foo OR bar
+foo OR bar OR "foo bar"~1000000^10
+"foo bar" "baz bing"
++("foo bar" "baz bing") "foo baz"~1000000
+
+(c) - Index time boosting
+
+>>>>> One can apply this concept to 
+
+||||||||  https://wiki.apache.org/solr/SolrRelevancyFAQ#Should_I_use_the_standard_or_dismax_Query_Parser
+
+https://lucene.apache.org/core/4_0_0/core/org/apache/lucene/search/similarities/TFIDFSimilarity.html
+
+Score Boosting
+Lucene allows influencing search results by "boosting" in more than one level:
+
+Document level boosting - while indexing - by calling document.setBoost() before a document is added to the index.
+Document's Field level boosting - while indexing - by calling field.setBoost() before adding a field to the document (and before adding the document to the index).
+Query level boosting - during search, by setting a boost on a query clause, calling Query.setBoost().
+
+update = "add" | "set" | "inc" — http://wiki.apache.org/solr/Atomic_Updates
+
+///
+<add>
+  <doc boost="2.5">
+    <field name="employeeId">05991</field>
+    <field name="office" boost="2.0">Bridgewater</field>
+  </doc>
+</add>
+
+http://wiki.apache.org/solr/DataImportHandler#Special_Commands
+
+
+(d)
+Custom Scoring Function :
+http://wiki.apache.org/solr/FunctionQuery#General_Example
+General Example
+
+To give more idea about the use of the function query, suppose index stores dimensions in meters x, y,z of some hypothetical boxes with arbitrary names stored in field boxname. Suppose we want to search for box matching name findbox but ranked according to volumes of boxes, the query params would be:
+  q=boxname:findbox+_val_:"product(product(x,y),z)"
+Although this will rank the results based on volumes but in order to get the computed volume you will need to add parameter...
+>> http://wiki.apache.org/solr/FunctionQuery
+
+  &fl=*,score
+...where score will contain the resultant volume.
+
+Suppose you also have a field containing weight of the box as 'weight', then to sort by the density of the box and return the value of the density in score you query should be...
+
+>> http://localhost:8983/solr/select/?q=boxname:findbox+_val_:"div(weight,product(product(x,y),z))"&fl=boxname,x,y,z,weight,score
+
+(e) Boost by document Age
+http://www.slideshare.net/Ramzi_Alqrainy/apache-solr-v1
+
+
+
+==============================================
+///  http://lucene.apache.org/core/3_5_0/scoring.html#The Big Picture
+
+http://wiki.apache.org/solr/UpdateXmlMessages#Optional_attributes_on_.22doc.22
+
+Build custom Search Application using Velocity Templated and Faceted Solr Search
+http://pixedin.blogspot.com/2012/05/howto-solr-building-custom-search.html
+
+=====================================================
+
+http://searchhub.org/2011/11/29/whats-with-lowercasing-wildcard-multiterm-queries-in-solr/
+
+WildCard :
+http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#solr.ReversedWildcardFilterFactory
+http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Wildcard Searches
+http://pietervogelaar.nl/solr-3-5-wildcard-search-as-sql-like/
+http://java.dzone.com/news/wildcard-queries-and-how-solr
+
+
+Solr Query :
+http://www.solrtutorial.com/solr-query-syntax.html
+http://wiki.apache.org/solr/CommonQueryParameters
+
+http://wiki.apache.org/solr/SolrQuerySyntax#Dismax_and_eDismax_Query_Parser
+http://wiki.apache.org/solr/ExtendedDisMax
+http://wiki.apache.org/solr/FunctionQuery
+
+==================================================================

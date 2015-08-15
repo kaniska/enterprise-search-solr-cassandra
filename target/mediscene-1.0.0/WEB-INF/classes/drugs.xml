@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drugs>
+<drug>
+<name>Progest</name>
+<mfc_name>Oscar Remedies Pvt. Ltd</mfc_name>
+<type>Injection</type>
+<package_per_unit>1 ml</package_per_unit>
+<unit_price>47.00</unit_price>
+<generics_list>Progesterone - 50 mg</generics_list>
+</drug>
+<drug>
+<name>Empeea</name>
+<mfc_name>Wyeth Ltd.</mfc_name>
+<type>Tablet</type>
+<package_per_unit>10 Tablet</package_per_unit>
+<unit_price>5.00</unit_price>
+<generics_list>Medroxy Progesterone Acetate - 2.5 mg</generics_list>
+</drug>
+<drug>
+<name>Meprate</name>
+<mfc_name>Serum International Ltd.</mfc_name>
+<type>Tablet</type>
+<package_per_unit>10 Tablet</package_per_unit>
+<unit_price>52.00</unit_price>
+<generics_list>Medroxy Progesterone Acetate - 2.5 mg</generics_list>
+</drug>
+<drug>
+<name>Medrigest</name>
+<mfc_name>Cronus (VHB Life Science Inc.)</mfc_name>
+<type>Tablet</type>
+<package_per_unit>10 Tablet</package_per_unit>
+<unit_price>23.00</unit_price>
+<generics_list>Medroxy Progesterone Acetate - 2.5 mg</generics_list>
+</drug>
+</drugs>
