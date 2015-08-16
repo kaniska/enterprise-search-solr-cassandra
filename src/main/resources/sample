@@ -26,7 +26,7 @@ CREATE TABLE MonkeyTypes (
 WITH comment='Important biological records'
 AND read_repair_chance = 1.0;
 
-CREATE TABLE DogTypes (
+CREATE TABLE AnimalTypes (
   block_id uuid,
   species text,
   alias text,

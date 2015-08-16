@@ -67,10 +67,10 @@
 
 	</bean>
 	
-	<context:component-scan  base-package="com.sos.app.mediscene.dao.templates"/>  -->
-    <context:component-scan  base-package="com.sos.app.mediscene.dao.cassandra"/>
-    <context:component-scan  base-package="com.sos.app.mediscene.dao.solr"/>
-	<context:component-scan  base-package="com.sos.app.mediscene.dao.core"/> 
-	<context:component-scan  base-package="com.sos.app.mediscene.service"/>
+	<context:component-scan  base-package="com.enterprise.app.mediscene.dao.templates"/>  -->
+    <context:component-scan  base-package="com.enterprise.app.mediscene.dao.cassandra"/>
+    <context:component-scan  base-package="com.enterprise.app.mediscene.dao.solr"/>
+	<context:component-scan  base-package="com.enterprise.app.mediscene.dao.core"/> 
+	<context:component-scan  base-package="com.enterprise.app.mediscene.service"/>
 	
 </beans>
