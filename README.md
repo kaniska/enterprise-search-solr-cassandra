@@ -6,8 +6,10 @@ This README would normally document whatever steps are necessary to get your app
 
 * Quick summary
 ** demonstrates Solr Search Query patterns to find direct and correalted information from Mediscene documents
-* Version
-
+** Examples
+(Query without boosting) http://localhost:8983/solr/collection1/select?q=indication:*skin*
+(Query with boosting) http://localhost:8983/solr/collection1/select?q=indication:*skin*&defType=edismax&bq=indication:*Herpes*^0.5
+Read about the request parameters being used : fl, qf,pf2,ps,mm and tie here: http://wiki.apache.org/solr/DisMaxQParserPlugin.
 
 ### How do I get set up? ###
 
