@@ -5,12 +5,18 @@ This README would normally document whatever steps are necessary to get your app
 ### What is this repository for? ###
 
 * Quick summary
+** demonstrates Solr Search Query patterns to find direct and correalted information from Mediscene documents
 * Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+
 
 ### How do I get set up? ###
 
 * Summary of set up
+** Solr Setup 
+** Document Indexing
+** Cassandra Setup
+** Batch Scheduler 
+** Query API
 * Configuration
 * Dependencies
 * Database configuration
@@ -27,3 +33,5 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo) 
