@@ -15,7 +15,13 @@ Read about the request parameters being used : fl, qf,pf2,ps,mm and tie here: ht
 
 * Summary of set up
 ** Solr Setup 
+ps -ef | grep jetty
+kill -9 <pid>
+cd ~/solr/example/
+sudo rm -rf solr-webapp
+nohup sudo java -Dsolr.home=~/solr/example/solr -jar start.jar &
 ** Document Indexing
+curl -X POST -d @drugs.xml http://localhost:8080/mediscene/entities/batch/add --header "Content-Type:text/plain"
 ** Cassandra Setup
 ** Batch Scheduler 
 ** Query API
