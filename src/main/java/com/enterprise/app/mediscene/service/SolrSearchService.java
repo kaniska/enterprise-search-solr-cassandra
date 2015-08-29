@@ -1,9 +1,9 @@
-package com.sos.app.mediscene.service;
+package com.enterprise.app.mediscene.service;
 
 import java.util.List;
 
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
 
 public interface SolrSearchService {
 

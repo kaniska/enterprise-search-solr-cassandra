@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.sos.app.mediscene.dao.core;
+package com.enterprise.app.mediscene.dao.core;
 
 import java.sql.SQLException;
 
-import com.sos.app.mediscene.context.BatchFinalizationRequest;
-import com.sos.app.mediscene.context.BatchInitializationResponse;
-import com.sos.app.mediscene.context.BatchRequestContext;
+import com.enterprise.app.mediscene.context.BatchFinalizationRequest;
+import com.enterprise.app.mediscene.context.BatchInitializationResponse;
+import com.enterprise.app.mediscene.context.BatchRequestContext;
 
 /**
  * @author Kaniska_Mandal

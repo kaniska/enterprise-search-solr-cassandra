@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.service;
+package com.enterprise.app.mediscene.service;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sos.app.mediscene.dao.solr.SolrDao;
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.dao.solr.SolrDao;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
 
 @Component("solrSearchService")
 public class SolrSearchServiceImpl implements SolrSearchService {

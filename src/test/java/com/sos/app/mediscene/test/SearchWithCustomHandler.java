@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.test;
+package com.enterprise.app.mediscene.test;
 
 import junit.framework.Assert;
 
@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.sos.app.mediscene.model.SearchCriteria;
-import com.sos.app.mediscene.service.SolrSearchService;
+import com.enterprise.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.service.SolrSearchService;
  
 
 /**

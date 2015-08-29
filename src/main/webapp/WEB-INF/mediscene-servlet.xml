@@ -41,7 +41,7 @@
          <property name="supportedMediaTypes" value="application/json" />
      </bean>
 
-<context:component-scan  base-package="com.sos.app.mediscene.controller"/>
+<context:component-scan  base-package="com.enterprise.app.mediscene.controller"/>
 <mvc:annotation-driven />
 <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>

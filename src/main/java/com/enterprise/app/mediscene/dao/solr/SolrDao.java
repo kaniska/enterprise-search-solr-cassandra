@@ -1,12 +1,12 @@
-package com.sos.app.mediscene.dao.solr;
+package com.enterprise.app.mediscene.dao.solr;
 
 import java.util.List;
 
 import org.dom4j.Node;
 import org.json.JSONObject;
 
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
 
 public interface SolrDao {
 

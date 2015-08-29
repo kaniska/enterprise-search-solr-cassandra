@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.util;
+package com.enterprise.app.mediscene.util;
 
 import javax.sql.DataSource;
 

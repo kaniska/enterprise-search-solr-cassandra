@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.service;
+package com.enterprise.app.mediscene.service;
 
 import java.sql.SQLException;
 import java.util.Map;
@@ -9,12 +9,12 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sos.app.mediscene.context.BatchFinalizationRequest;
-import com.sos.app.mediscene.context.BatchInitializationResponse;
-import com.sos.app.mediscene.context.BatchRequestContext;
-import com.sos.app.mediscene.dao.core.BulkRequestDAO;
-import com.sos.app.mediscene.util.StringUtil;
-import com.sos.app.mediscene.util.Constants;
+import com.enterprise.app.mediscene.context.BatchFinalizationRequest;
+import com.enterprise.app.mediscene.context.BatchInitializationResponse;
+import com.enterprise.app.mediscene.context.BatchRequestContext;
+import com.enterprise.app.mediscene.dao.core.BulkRequestDAO;
+import com.enterprise.app.mediscene.util.StringUtil;
+import com.enterprise.app.mediscene.util.Constants;
 
 /**
  * @author Kaniska_Mandal

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>solar-search</name>
+	<name>solr-search</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -53,4 +53,3 @@
 		<nature>org.zeroturnaround.eclipse.jrebelNature</nature>
 	</natures>
 </projectDescription>
-

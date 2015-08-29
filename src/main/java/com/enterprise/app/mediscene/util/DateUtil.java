@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.util;
+package com.enterprise.app.mediscene.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

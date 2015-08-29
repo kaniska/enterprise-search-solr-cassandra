@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.test;
+package com.enterprise.app.mediscene.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,13 +21,13 @@ import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.sos.app.mediscene.context.BatchRequestContext;
-import com.sos.app.mediscene.dao.solr.SolrDaoImpl;
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
-import com.sos.app.mediscene.parser.XMLParser;
-import com.sos.app.mediscene.service.BatchRequestService;
-import com.sos.app.mediscene.service.SolrSearchService;
+import com.enterprise.app.mediscene.context.BatchRequestContext;
+import com.enterprise.app.mediscene.dao.solr.SolrDaoImpl;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.parser.XMLParser;
+import com.enterprise.app.mediscene.service.BatchRequestService;
+import com.enterprise.app.mediscene.service.SolrSearchService;
  
 
 /**

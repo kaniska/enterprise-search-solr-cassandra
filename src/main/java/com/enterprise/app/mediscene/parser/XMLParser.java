@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.parser;
+package com.enterprise.app.mediscene.parser;
 
 import java.io.StringReader;
 import java.util.ArrayList;

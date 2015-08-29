@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.dao.cassandra;
+package com.enterprise.app.mediscene.dao.cassandra;
 
 import java.util.List;
 import java.util.Map;

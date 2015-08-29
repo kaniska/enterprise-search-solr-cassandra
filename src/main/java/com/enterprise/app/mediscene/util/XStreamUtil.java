@@ -1,8 +1,8 @@
-package com.sos.app.mediscene.util;
+package com.enterprise.app.mediscene.util;
 
-import com.sos.app.mediscene.context.BatchInitializationResponse;
-import com.sos.app.mediscene.context.BatchQueryResponse;
-import com.sos.app.mediscene.context.GenericEntity;
+import com.enterprise.app.mediscene.context.BatchInitializationResponse;
+import com.enterprise.app.mediscene.context.BatchQueryResponse;
+import com.enterprise.app.mediscene.context.GenericEntity;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 

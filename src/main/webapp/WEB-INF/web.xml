@@ -42,7 +42,7 @@
 <!-- To allow cross origin requests -->
 	 <filter>
 		<filter-name>cors</filter-name>
-		<filter-class>com.sos.app.mediscene.filters.CORSFilter</filter-class>
+		<filter-class>com.enterprise.app.mediscene.filters.CORSFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>cors</filter-name>

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.context;
+package com.enterprise.app.mediscene.context;
 
 import java.io.Serializable;
 import java.util.ArrayList;

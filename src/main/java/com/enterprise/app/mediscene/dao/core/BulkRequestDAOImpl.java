@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.dao.core;
+package com.enterprise.app.mediscene.dao.core;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,16 +24,16 @@ import org.springframework.jdbc.core.SqlParameterValue;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import com.sos.app.mediscene.context.BatchFinalizationRequest;
-import com.sos.app.mediscene.context.BatchInitializationResponse;
-import com.sos.app.mediscene.context.BatchRequestContext;
-import com.sos.app.mediscene.dao.cassandra.CassandraDao;
-import com.sos.app.mediscene.dao.solr.SolrDao;
-import com.sos.app.mediscene.dao.solr.SolrDaoImpl;
-import com.sos.app.mediscene.parser.XMLParser;
-import com.sos.app.mediscene.util.BatchScheduler;
-import com.sos.app.mediscene.util.Constants;
-import com.sos.app.mediscene.util.CustomJdbcCommand;
+import com.enterprise.app.mediscene.context.BatchFinalizationRequest;
+import com.enterprise.app.mediscene.context.BatchInitializationResponse;
+import com.enterprise.app.mediscene.context.BatchRequestContext;
+import com.enterprise.app.mediscene.dao.cassandra.CassandraDao;
+import com.enterprise.app.mediscene.dao.solr.SolrDao;
+import com.enterprise.app.mediscene.dao.solr.SolrDaoImpl;
+import com.enterprise.app.mediscene.parser.XMLParser;
+import com.enterprise.app.mediscene.util.BatchScheduler;
+import com.enterprise.app.mediscene.util.Constants;
+import com.enterprise.app.mediscene.util.CustomJdbcCommand;
 
 
 /**

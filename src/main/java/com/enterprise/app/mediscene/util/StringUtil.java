@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.util;
+package com.enterprise.app.mediscene.util;
 
 import java.util.HashMap;
 import java.util.Map;

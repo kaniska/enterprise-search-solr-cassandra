@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.client.solr;
+package com.enterprise.app.mediscene.client.solr;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.io.InputStreamReader;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 
-import com.sos.app.mediscene.dao.solr.SolrDaoImpl;
-import com.sos.app.mediscene.parser.XMLParser;
+import com.enterprise.app.mediscene.dao.solr.SolrDaoImpl;
+import com.enterprise.app.mediscene.parser.XMLParser;
 
 public class SolrIndexerClient {
 

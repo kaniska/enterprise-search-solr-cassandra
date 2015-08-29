@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.controller;
+package com.enterprise.app.mediscene.controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,11 +21,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.sos.app.mediscene.context.BatchRequestContext;
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
-import com.sos.app.mediscene.service.BatchRequestService;
-import com.sos.app.mediscene.service.SolrSearchService;
+import com.enterprise.app.mediscene.context.BatchRequestContext;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.service.BatchRequestService;
+import com.enterprise.app.mediscene.service.SolrSearchService;
 
 @Controller
 public class MediSceneWebController {

@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.controller;
+package com.enterprise.app.mediscene.controller;
 
 import java.util.Arrays;
 

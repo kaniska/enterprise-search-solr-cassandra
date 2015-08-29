@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sos.app.mediscene.util;
+package com.enterprise.app.mediscene.util;
 
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.logging.Logger;
 
-import com.sos.app.mediscene.context.BatchInitializationResponse;
+import com.enterprise.app.mediscene.context.BatchInitializationResponse;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.model;
+package com.enterprise.app.mediscene.model;
 
 import java.io.Serializable;
 import java.util.Iterator;

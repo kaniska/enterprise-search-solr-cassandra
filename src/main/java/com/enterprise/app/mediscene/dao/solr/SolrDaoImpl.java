@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.dao.solr;
+package com.enterprise.app.mediscene.dao.solr;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,8 +27,8 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.sos.app.mediscene.model.BusinessEntity;
-import com.sos.app.mediscene.model.SearchCriteria;
+import com.enterprise.app.mediscene.model.BusinessEntity;
+import com.enterprise.app.mediscene.model.SearchCriteria;
 
 @Component("solrDao")
 public class SolrDaoImpl implements SolrDao{

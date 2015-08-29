@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.client.solr;
+package com.enterprise.app.mediscene.client.solr;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

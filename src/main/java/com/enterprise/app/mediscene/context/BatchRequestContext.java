@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.sos.app.mediscene.context;
+package com.enterprise.app.mediscene.context;
 
-import com.sos.app.mediscene.parser.XMLParser;
+import com.enterprise.app.mediscene.parser.XMLParser;
 
 /**
  * Context Object that stores the batch specific attributes.

@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.filters;
+package com.enterprise.app.mediscene.filters;
 
 import java.io.IOException;
 

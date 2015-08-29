@@ -1,4 +1,4 @@
-package com.sos.app.mediscene.client.cassandra;
+package com.enterprise.app.mediscene.client.cassandra;
 
 	
 	import java.util.ArrayList;
